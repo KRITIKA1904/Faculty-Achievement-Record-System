@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+ }
+.navlist{
+    width: 100%;
+    padding: 5px 10vw;
+    position: fixed;
+    background: rgba(18,18,39,0.9);
+    z-index: 10;
+ }
+ .navlist ul{
+    display: flex;
+    list-style: none;
+
+ }
+ .navlist ul li:first-child{
+    flex: 1;
+ }
+ .navlist ul li img
+ {
+   position: relative;
+   left: -140px;
+   top: 2px;
+   width: 5%;
+   height: 80%;
+   object-fit: scover;
+ }
+ .navlist ul h4{
+    font-family: serif;
+    color: #283048;
+ }
+ .navlist ul li a{
+    margin-left: 20px;
+    font-size: 12px;
+ }
+ .navlist ul a:hover
+ {
+    color: #161d33;
+ }
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("http://www.banasthali.org/banasthali/wcms/en/home/lower-menu/departments/arch_and_planning/images/arch-1.jpg");/*https://www.collegebatch.com/static/clg-gallery/banasthali-vidyapith-jaipur-204238.jpg*/
+    background-size: cover;
+}
+.contact .content
+{
+   max-width: 800px; 
+   text-align: center;
+}
+.contact .content h2
+{
+    font-size: 36px;
+    font-weight: 500;
+    color: black;
+}
+.contact .content p
+{
+    font-weight: 300;
+    color: black;
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon
+{
+    max-width: 60px;
+    height: 60px;
+    /* background: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80%;
+    font-size: 22px;
+}
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: rgb(33, 31, 31);/*#00bcd4*/
+}

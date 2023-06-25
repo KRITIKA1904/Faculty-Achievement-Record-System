@@ -1,0 +1,356 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Century Gothic",sans-serif; */
+    font-family: "Product Sans Light";
+    transition: 0.6s;
+    overflow: hidde;
+ }
+
+ a{
+    color: #f1f1f8;
+    text-decoration: none;
+ }
+ .navlist{
+    width: 100%;
+    padding: 5px 10vw;
+    position: fixed;
+    background: rgb(13, 13, 163);
+    z-index: 10;
+ }
+ .navlist ul{ 
+    display: flex;
+    list-style: none;
+}
+.navlist ul li:first-child{
+    flex: 1;
+} 
+.navlist ul h4{
+    font-family: serif;
+    color: #fff;
+}
+.navlist ul a{
+    margin-left: 10px;
+    font-size: 12px;
+}
+.navlist ul a:hover{
+    color: rgb(238, 59, 59);
+}
+
+/* /container/ */
+
+.container{
+    width: 100%;
+    height: 80vh;
+    padding-top: 30vh;
+    background-image: /*linear-gradient(#F0F8FF,#000000c3),*/url("http://www.banasthali.org/banasthali/wcms/en/home/lower-menu/departments/arch_and_planning/images/arch-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;   
+    text-shadow: -2px 2px 2px black;
+}
+.container h1{
+    font-family: serif;
+    margin-bottom: 20px;
+    word-spacing: 5px;
+}
+.container p{
+   margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+.container button{
+     padding: 10px;
+     background: linear-gradient(120deg,#0099ff,blue);;
+     /*border: 5px solid #021af6;*/ /*rgb(9, 3, 85)*/
+     /*background: #021af6;*/
+     background: linear-gradient(120deg,#0099ff,blue);
+     border-radius: 5pc;
+}
+
+.container button:hover{
+    background: linear-gradient(120deg,#0099ff,blue);
+}
+
+/* /slider/ */
+.slider{
+	position: relative;
+	width: 100%;
+	background: #2c3e50; /* darckblue */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.myslide{
+	height: 500px;
+	display: none;
+	overflow: hidden;
+}
+.but{
+    padding: 10px;
+    background: linear-gradient(120deg,#0099ff,blue);;
+    /*border: 5px solid #021af6;*/ /*rgb(9, 3, 85)*/
+    /*background: #021af6;*/
+    background: linear-gradient(120deg,#0099ff,blue);
+    border-radius: 5pc;
+    border: 1px solid black;
+}
+
+.myslide button:hover{
+   background: linear-gradient(120deg,#0099ff,blue);
+}
+
+.prev, .next{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* /2 */
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #00a7ff; /* blue */
+}
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+/* /muslide add fade */
+
+/* 3 */
+.txt{
+	position: absolute;
+    /* position:sticky; */
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 40%;
+	left: 15%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+.txt h1{
+	color: #00a7ff; /* blue */
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+.txt p{
+	font-weight: bold;
+	font-size: 20px;
+}
+/* /3 */
+
+/* 4 */
+.setimg{
+	transform: scale(1, 1);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 5s;
+  	animation-name: zoomin;
+  	animation-duration: 5s;
+    border-radius: 10px;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(0.7, 0.7);}
+  to {transform: scale(1, 1);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(0.7, 0.7);}
+  to {transform: scale(1, 1);}
+}
+/* img{
+	transform: scale(1.3, 1.3);
+	-webkit-animation-name: zoomin;
+  	-webkit-animation-duration: 5s;
+  	animation-name: zoomin;
+  	animation-duration: 5s;
+}
+@-webkit-keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.3, 1.3);}
+}
+
+
+@keyframes zoomin {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.3, 1.3);}
+} */
+/* /4 */
+
+/* 5 */
+@media screen and (max-width: 800px){
+	.myslide{
+		height: 500px;
+	}
+	.txt{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p{
+		font-size: 13px;
+	}
+
+}
+@media screen and (max-width: 520px){
+	.txt h1{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.sign{
+		margin-right: 20px;
+	}
+	.sign a{
+		font-size: 12px;
+	}
+}
+/* /content-box/ */
+
+.content-box{
+    width: 100%; /*80%*/
+    margin: auto;
+}
+.content-box>h2{
+    text-align: center;
+    color: #020d5a;
+    margin: 100px;
+}
+.content-box>h2::before, .content-box>h2::after{
+    content: "------";
+    letter-spacing: -5px;
+    margin: 0 10px;
+}
+ .content-box table
+ {
+    width: 100%;
+    height: 50vh;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: poppin;
+    font-display: block;
+    line-height: 2em;
+ }
+
+.section-container{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y:0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+.section-container .columns{
+    flex: 0 0 auto;
+    width:50%;
+    height:50%;
+}
+
+/* FOOTER */
+footer{
+   margin-top: 40px;
+   background: #ccc; 
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+footer ul li{
+    margin: 10px;
+}
+@media (max-width: 600px){
+    content-box .row{
+        flex-direction: column;
+    }
+    .content-box .column{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .content-box .column a:last-child{
+        line-height: 80vw;
+        font-size: 6vw;
+    }
+}
